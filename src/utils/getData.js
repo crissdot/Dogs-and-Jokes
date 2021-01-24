@@ -1,17 +1,17 @@
-const CATS_API = 'https://aws.random.cat/meow/';
-const JOKES_API = 'https://official-joke-api.appspot.com/jokes/ten/';
+const DOGS_API = 'https://random.dog/woof.json';
+const JOKES_API = 'https://official-joke-api.appspot.com/jokes/random';
 
 const getData = async () => {
     try {
-        const catResponse = await fetch(CATS_API);
-        const catData = await catResponse.json();
+        const dogResponse = await fetch(DOGS_API);
+        const dogData = await dogResponse.json();
 
-        const jokeResponse = await fetch('https://official-joke-api.appspot.com/jokes/random');
+        const jokeResponse = await fetch(JOKES_API);
         const jokeData = await jokeResponse.json();
 
         const data = {
             ...jokeData,
-            ...catData
+            ...dogData
         }
         console.log(data);
         return data;
