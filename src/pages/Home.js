@@ -6,10 +6,8 @@ const Home = async () => {
     const view = `
         <div class="characters">
             <article class="character-item">
-                <a href="#/1/">
-                    <img src="image" alt="name">
-                    <h2>Name</h2>
-                </a>
+                <img src="${data.url}" alt="dog" with="500" height="500">
+                <h2>${data.setup}</h2>
             </article>
         </div>
     `;
