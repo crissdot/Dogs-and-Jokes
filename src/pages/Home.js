@@ -7,7 +7,8 @@ const Home = async () => {
         <div class="characters">
             <article class="character-item">
                 <img src="${data.url}" alt="dog">
-                <h2>${data.setup}</h2>
+                <h2 class="setup">${data.setup}</h2>
+                <h2 class="punchline">${data.punchline}</h2>
             </article>
         </div>
     `;

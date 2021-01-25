@@ -13,7 +13,10 @@ body {
   display: grid;
   justify-content: center;
   grid-template-columns: minmax(auto, 1024px);
+  grid-template-rows: 100px 1fr;
+  min-height: calc(100vh - 20px);
   padding: 10px;
+  padding-bottom: 20px;
   row-gap: 10px;
 }
 
@@ -29,18 +32,18 @@ body {
 }
 
 
-.characters {
-  width: 100%;
-  min-width: 300px;
-  max-width: 500px;
-  height: auto;
-  margin: 0 auto;
+.characters{
+  height: 100%;
 }
 .character-item {
   display: block;
+  width: 100%;
+  min-width: 300px;
+  max-width: 768px;
+  height: 100%;
+  margin: 0 auto;
   border-radius: 5px;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
-  text-decoration: none;
   animation-name: fade;
   animation-duration: 2s;
 }
@@ -49,15 +52,15 @@ body {
   min-height: 300px;
   border-radius: 5px 5px 0 0;
 }
-.character-item h2 {
+.setup, .punchline {
   margin: 0;
-  padding: 5px 10px;
+  padding: 10px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
 }
-.character-item a {
-  text-decoration: none;
-  color: #026c86;
+.punchline {
+  display: none;
+  font-weight: bold;
 }
 
 @keyframes fade {
