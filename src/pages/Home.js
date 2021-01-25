@@ -6,7 +6,7 @@ const Home = async () => {
     const view = `
         <div class="characters">
             <article class="character-item">
-                <img src="${data.url}" alt="dog" with="500" height="500">
+                <img src="${data.url}" alt="dog">
                 <h2>${data.setup}</h2>
             </article>
         </div>
