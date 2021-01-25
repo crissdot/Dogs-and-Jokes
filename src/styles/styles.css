@@ -52,15 +52,24 @@ body {
   min-height: 300px;
   border-radius: 5px 5px 0 0;
 }
-.setup, .punchline {
+.setup, .show-punch, .punchline {
   margin: 0;
   padding: 10px;
   font-size: 18px;
   font-weight: 500;
 }
+.show-punch {
+  padding: 0;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+}
 .punchline {
   display: none;
   font-weight: bold;
+  animation-name: fade;
+  animation-duration: 2s;
 }
 
 @keyframes fade {
