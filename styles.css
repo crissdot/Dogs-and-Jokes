@@ -35,6 +35,49 @@ body {
 .characters{
   height: 100%;
 }
+
+.next {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  background-color: white;
+  cursor: pointer;
+}
+.next:hover {
+  border: 1px solid black;
+}
+.next:disabled {
+  border: 0;
+}
+.next svg {
+  transform: rotate(270deg);
+}
+.next:disabled svg {
+  display: none;
+}
+.next:disabled::after {
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 4px solid #eee;
+  border-top: 4px solid #666;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .character-item {
   display: block;
   width: 100%;
@@ -49,7 +92,6 @@ body {
 .character-item img {
   width: 100%;
   min-height: 300px;
-  border-radius: 5px 5px 0 0;
 }
 .setup, .show-punch, .punchline {
   margin: 0;
