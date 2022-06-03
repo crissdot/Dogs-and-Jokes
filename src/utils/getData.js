@@ -1,5 +1,5 @@
 const DOGS_API = 'https://random.dog/woof.json';
-const JOKES_API = 'https://official-joke-api.appspot.com/jokes/random';
+const JOKES_API = 'https://nova-joke-api.netlify.app/.netlify/functions/index/api/random/';
 
 const getData = async () => {
     try {
